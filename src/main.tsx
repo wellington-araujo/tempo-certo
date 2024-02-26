@@ -4,11 +4,14 @@ import { BrowserRouter } from 'react-router-dom'
 
 import { App } from './App.tsx'
 import './styles/global.css'
+import { WeatherProvider } from './providers/weather.provider.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <WeatherProvider>
+        <App />
+      </WeatherProvider>
     </BrowserRouter>
   </React.StrictMode>,
 )
